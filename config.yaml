@@ -1,0 +1,17 @@
+cookie:
+  expiry_days: 30
+  key: abcd
+  name: aurora_app
+credentials:
+  usernames:
+    Alok:
+      email: ak5655@srmist.edu.in
+      name: Alok Kumar
+      password: $2b$12$4CsMSnbfmwbYVME2BaFj8.Eqm7PiBsPQpxcRmplQBE2DQRgUdPma6
+      preferred_lang: English
+    demo:
+      email: demo@gmail.com
+      logged_in: false
+      name: Demo Test
+      password: $2b$12$g/1L2dM4UI4YjN5gQ1fxEuLxaK3U4PVh50rlWEjRZYvcty3ZEGRIG
+      preferred_lang: English

@@ -3,9 +3,8 @@ from streamlit_lottie import st_lottie
 import requests
 from PIL import Image
 import json
+from features.auth import authentication
 
-# Set Page Configuration
-st.set_page_config(page_title="PreMedix - Disease Prediction System", layout="wide")
 
 # Function to Load Lottie Animations
 def get(path: str):
@@ -91,17 +90,16 @@ st.markdown("<br><br>", unsafe_allow_html=True)
 col1, col2 = st.columns([1, 1])
 
 with col1:
-    st.markdown("""
-    <h2 style='color:#27AE60; font-size: 32px;'>ℹ️ About PreMedix</h2>
-    <p style='font-size: 18px; line-height: 1.8;'>
-    '''<b>PreMedix</b> is a cutting-edge, AI-powered web application designed to <b>detect multiple diseases</b> with high accuracy.<br>
+    st.header("ℹ️ About PreMedix",divider="rainbow")
+    st.markdown("""<p style='font-size: 18px; line-height: 1.8;'>
+    <b>PreMedix</b> is a cutting-edge, AI-powered web application designed to <b>detect multiple diseases</b> with high accuracy.<br>
     -It uses advanced machine learning and deep learning algorithms to analyze user inputs and predict disease likelihood quickly and efficiently.'''
     </p>
     """, unsafe_allow_html=True)
 
 with col2:
     path = get('Animation - 1736172441933.json')
-    st_lottie(path, height=250)
+    st_lottie(path, height=300)
 
 st.markdown("<br><br>", unsafe_allow_html=True)
 
@@ -109,8 +107,8 @@ st.markdown("<br><br>", unsafe_allow_html=True)
 col1, col2 = st.columns([1, 1])
 
 with col2:
+    st.header("✨ Key Features", divider="rainbow")
     st.markdown("""
-    <h2 style='color:#E67E22; font-size: 32px;'>✨ Key Features</h2>
     <ul style='font-size: 18px; line-height: 2;'>
     <li><b>🔍 Multi-Disease Detection:</b> Supports predictions for:</li>
     <ul>
@@ -130,8 +128,9 @@ with col2:
     """, unsafe_allow_html=True)
 
 with col1:
+    st.markdown("<br><br>", unsafe_allow_html=True)
     path = get('Animation - 1736184853531.json')
-    st_lottie(path, height=300)
+    st_lottie(path, height=350)
 
 st.markdown("<br><br>", unsafe_allow_html=True)
 
@@ -139,8 +138,8 @@ st.markdown("<br><br>", unsafe_allow_html=True)
 col3, col4 = st.columns([1, 1])
 
 with col3:
+    st.header("🌟 Why Choose PreMedix?",divider="rainbow")
     st.markdown("""
-    <h2 style='color:#8E44AD; font-size: 32px;'>🌟 Why Choose PreMedix?</h2>
     <ul style='font-size: 18px; line-height: 2;'>
     <li><b>⏳ Early Detection Saves Lives:</b> Timely predictions can lead to faster treatments and better outcomes.</li>
     <li><b>📱 Accessible Anywhere:</b> Available on any device with an internet connection.</li>

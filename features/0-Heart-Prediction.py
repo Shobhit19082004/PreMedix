@@ -1,4 +1,4 @@
 import streamlit as st
 
 
-st.title("Heart Disease Prediction")
+st.header("Heart Disease Prediction 🫀",divider="rainbow")

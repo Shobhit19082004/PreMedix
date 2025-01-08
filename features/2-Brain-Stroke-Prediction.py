@@ -1,3 +1,3 @@
 import streamlit as st
 
-st.title("Lung Cancer Prediction")
+st.header("Brain Stroke Prediction 🧠", divider="rainbow")

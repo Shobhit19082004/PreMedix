@@ -74,15 +74,47 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Banner Image
-image = Image.open('banner.jpg')  # Replace 'banner.jpg' with your image
-st.image(image, use_column_width=True)
 
+# Banner Image 
+image = Image.open('Banner3.jpg')  
+
+import base64
+from io import BytesIO
+
+buffered = BytesIO()
+image.save(buffered, format="PNG")
+img_str = base64.b64encode(buffered.getvalue()).decode()
+
+st.markdown(f"""
+    <div style="display: flex; justify-content: center;">
+        <img src="data:image/png;base64,{img_str}" style="width: 1200px; height: 400px; border-radius: 10px; box-shadow: 0 4px 8px rgba(59, 13, 175, 0.2);"/>
+    </div>
+""", unsafe_allow_html=True)
+
+# # Banner Image
+# image = Image.open('banner.jpg')  
+# image = image.resize((800, 200))  
+# st.image(image, use_column_width=False)
+#Empowering Health with AI-driven Predictions
 # Title and Introduction
 st.markdown("""
-<h1 style='text-align: center; font-size: 60px; color:#4A90E2; font-family: Arial Black;'>🩺 PreMedix</h1>
-<h3 style='text-align: center; font-size: 28px; color:#7F8C8D;'>Empowering Health with AI-driven Predictions</h3>
+<h1 style='text-align: center; font-size: 60px; color:#4A90E2; font-family: Arial Black;'> 🧑🏽‍⚕️PreMedix</h1>
+<h3 style='text-align: center; font-size: 28px; color:#7F8C8D;'>Empowering Healthcare with AI: Precise Predictions, Better Lives
+</h3>
+<style>
+#   h1 {
+#     border-bottom: 4px solid;
+#     border-image: linear-gradient(to right, #FF7F50, #FFD700, #32CD32, #1E90FF);
+#     border-image-slice: 1;
+  }
+  h3 {
+    border-bottom: 4px solid;
+    border-image: linear-gradient(to right, #FF7F50, #FFD700, #32CD32, #1E90FF);
+    border-image-slice: 1;
+  }
+</style>
 """, unsafe_allow_html=True)
+
 
 st.markdown("<br><br>", unsafe_allow_html=True)
 
@@ -91,13 +123,18 @@ col1, col2 = st.columns([1, 1])
 
 with col1:
     st.header("ℹ️ About PreMedix",divider="rainbow")
-    st.markdown("""<p style='font-size: 18px; line-height: 1.8;'>
+    st.markdown("""<p style='font-size: 20px; line-height: 1.8;'>
     <b>PreMedix</b> is a cutting-edge, AI-powered web application designed to <b>detect multiple diseases</b> with high accuracy.<br>
-    -It uses advanced machine learning and deep learning algorithms to analyze user inputs and predict disease likelihood quickly and efficiently.'''
+        <ul style='list-style-type: none; padding: 0;'>
+        <li style='margin: 5px 0; padding: 10px; border-radius: 5px;'>🌟 PreMedix is an AI-powered web application designed to predict multiple diseases quickly and accurately. Using advanced machine learning algorithms, it simplifies healthcare by providing fast, reliable, and secure predictions. With a user-friendly interface and smart analytics, PreMedix helps users make informed health decisions, enabling early diagnosis and better outcomes—all from the comfort of their devices.</li>
+        <li style='margin: 5px 0; padding: 10px; border-radius: 5px;'>🌟 It uses advanced machine learning and deep learning algorithms to analyze user inputs and predict disease likelihood quickly and efficiently.</li>
+        </ul>
     </p>
     """, unsafe_allow_html=True)
+    
 
 with col2:
+    st.markdown("<br><br>", unsafe_allow_html=True)
     path = get('Animation - 1736172441933.json')
     st_lottie(path, height=300)
 
@@ -109,28 +146,31 @@ col1, col2 = st.columns([1, 1])
 with col2:
     st.header("✨ Key Features", divider="rainbow")
     st.markdown("""
-    <ul style='font-size: 18px; line-height: 2;'>
-    <li><b>🔍 Multi-Disease Detection:</b> Supports predictions for:</li>
-    <ul>
-    <li>🫁 Lung Cancer</li>
-    <li>❤️ Heart Disease</li>
-    <li>🖼️ Skin Cancer</li>
-    <li>💉 Diabetes</li>
-    <li>🧠 Brain Tumor</li>
-    <li>🦟 Malaria</li>
-    <li>🦠 Dengue</li>
-    <li>👨‍🦯 Parkinson's Disease</li>
+    <ul style='font-size: 18px; line-height: 2; list-style-type: none; padding: 0;'>
+    <li style='margin: 5px 0; padding: 10px; border-radius: 5px;'><b>🔍 Machine Learning Based Multi-Disease Detection:</b></li>
     </ul>
-    <li><b>🖥️ User-Friendly Interface:</b> Interactive and easy-to-use design.</li>
-    <li><b>⚡ AI-Powered Accuracy:</b> Ensures high prediction performance.</li>
-    <li><b>🔒 Secure and Private:</b> Data is processed securely without storage.</li>
+    <ul style='list-style-type: none; padding: 0;'>
+    <li >🫁 Lung Cancer</li>
+    <li >❤️ Heart Disease</li>
+    <li >🖼️ Skin Cancer</li>
+    <li >💉 Diabetes</li>
+    <li >🧠 Brain Tumor</li>
+    <li >🦟 Malaria</li>
+    <li >🦠 Dengue</li>
+    <li >👨‍🦯 Parkinson's Disease</li>
+    </ul>
+    <ul style='list-style-type: none; padding: 0;'>
+    <li style='margin: 5px 0; padding: 10px; border-radius: 5px;'><b>🖥️ User-Friendly Interface:</b> Interactive and easy-to-use design.</li>
+    <li style='margin: 5px 0; padding: 10px; border-radius: 5px;'><b>⚡ AI-Powered Accuracy:</b> Ensures high prediction performance.</li>
+    <li style='margin: 5px 0; padding: 10px; border-radius: 5px;'><b>🔒 Secure and Private:</b> Data is processed securely without storage.</li>
     </ul>
     """, unsafe_allow_html=True)
 
 with col1:
     st.markdown("<br><br>", unsafe_allow_html=True)
+    st.markdown("<br><br>", unsafe_allow_html=True)
     path = get('Animation - 1736184853531.json')
-    st_lottie(path, height=350)
+    st_lottie(path, height=400)
 
 st.markdown("<br><br>", unsafe_allow_html=True)
 
@@ -141,9 +181,9 @@ with col3:
     st.header("🌟 Why Choose PreMedix?",divider="rainbow")
     st.markdown("""
     <ul style='font-size: 18px; line-height: 2;'>
-    <li><b>⏳ Early Detection Saves Lives:</b> Timely predictions can lead to faster treatments and better outcomes.</li>
-    <li><b>📱 Accessible Anywhere:</b> Available on any device with an internet connection.</li>
-    <li><b>👌 Easy to Use:</b> No technical knowledge required—just input data and get results!</li>
+    <li style='margin: 5px 0; padding: 10px; border-radius: 5px;'><b>⏳ Early Detection Saves Lives:</b> Timely predictions can lead to faster treatments and better outcomes.</li>
+    <li style='margin: 5px 0; padding: 10px; border-radius: 5px;'><b>📱 Accessible Anywhere:</b> Available on any device with an internet connection.</li>
+    <li style='margin: 5px 0; padding: 10px; border-radius: 5px;'><b>👌 Easy to Use:</b> No technical knowledge required—just input data and get results!</li>
     </ul>
     """, unsafe_allow_html=True)
 

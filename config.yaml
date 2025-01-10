@@ -1,11 +1,12 @@
 cookie:
   expiry_days: 30
   key: abcd
-  name: aurora_app
+  name: Premedix_app
 credentials:
   usernames:
-    Alok:
+    alok:
       email: ak5655@srmist.edu.in
+      failed_login_attempts: 1
       name: Alok Kumar
       password: $2b$12$4CsMSnbfmwbYVME2BaFj8.Eqm7PiBsPQpxcRmplQBE2DQRgUdPma6
       preferred_lang: English
@@ -14,4 +15,15 @@ credentials:
       logged_in: false
       name: Demo Test
       password: $2b$12$g/1L2dM4UI4YjN5gQ1fxEuLxaK3U4PVh50rlWEjRZYvcty3ZEGRIG
+      preferred_lang: English
+    shobhit:
+      email: shobhitadhya@gmail.com
+      logged_in: false
+      name: Shobhit Kumar
+      password: $2b$12$SgQHR.6Lwe8Y7Y/bPTJhoONAs/KzWv9Fk0s8n0NYYlEMtT0jBezEK
+      preferred_lang: English
+    sumitkumar:
+      email: shobhitadhya@gmail.com
+      name: 'Sumit Kumar '
+      password: $2b$12$IGymzjkDbJOWZEwFOAYWzOPpLi3faVnhAA6xvYG/5XZtRuwge4wBu
       preferred_lang: English

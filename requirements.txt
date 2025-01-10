@@ -17,3 +17,8 @@ python-dotenv
 ydata-profiling
 setuptools
 st-gsheets-connection
+keras
+torch
+torchvision
+fpdf
+

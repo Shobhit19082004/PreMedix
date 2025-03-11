@@ -4,6 +4,11 @@ cookie:
   name: Premedix_app
 credentials:
   usernames:
+    My Name:
+      email: sa5436@srmist.edu.in
+      name: MyName
+      password: $2b$12$hSA8qARG4Th6JG4EVAGTNu/ftuAK9cXe6YheB8PSfUYxV120dRMh2
+      preferred_lang: English
     alok:
       email: ak5655@srmist.edu.in
       failed_login_attempts: 1
@@ -17,10 +22,10 @@ credentials:
       password: $2b$12$g/1L2dM4UI4YjN5gQ1fxEuLxaK3U4PVh50rlWEjRZYvcty3ZEGRIG
       preferred_lang: English
     shobhit:
-      email: shobhitadhya@gmail.com
+      email: sa5436@srmist.edu.in
       logged_in: false
       name: Shobhit Kumar
-      password: $2b$12$SgQHR.6Lwe8Y7Y/bPTJhoONAs/KzWv9Fk0s8n0NYYlEMtT0jBezEK
+      password: $2b$12$DA7g2uPcdh8URvlhpGxqGeofYyHwaSfYA9v9DLGG.2qA2nNjHRdFC
       preferred_lang: English
     sumitkumar:
       email: shobhitadhya@gmail.com

@@ -2,6 +2,7 @@ import streamlit as st
 import google.generativeai as genai
 from dotenv import load_dotenv
 import os
+import time
 
 # Load environment variables
 load_dotenv()
@@ -26,6 +27,7 @@ def generate_diet_plan(disease):
         return response.text
     except Exception as e:
         return f"Error generating diet plan: {e}"
+
 
 # Streamlit UI
 st.warning('⚠️Note: This Diet Planner AI is powered by AI from PreMedix. The suggested diet plans are AI-generated and should not replace medical advice. Consult a dietitian or healthcare professional for personalized recommendations.')

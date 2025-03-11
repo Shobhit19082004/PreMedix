@@ -21,4 +21,11 @@ keras
 torch
 torchvision
 fpdf
+PyPDF2
+pytesseract
+pdfplumber
+faiss-cpu
+langchain_google_genai
+langchain
+langchain-community
 

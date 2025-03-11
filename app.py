@@ -30,5 +30,7 @@ if st.session_state["authentication_status"]:
          st.Page("features/5-Symptom-Checker.py",title="Symptom Checker AI", icon="🤒"),
          st.Page("features/6-Medical Image Analysis.py",title="Medical Image Assistant", icon="🩻"),
          st.Page("features/7-DietplanAI.py",title="AI Diet Planner", icon="🍽️"),
+         st.Page("features/8-Report-Analyser.py",title="Medical Report Analyser", icon="📄"),
+         st.Page("features/9-Mental-Health.py",title="Mental Health AI", icon="🙇🏻‍♂️")
      ])
      pg.run()
